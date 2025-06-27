@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>📘 Introductie &#8212; Jupyter Book Template</title>
+    <title>Is economische groei (gemeten via GDP per capita) positief gecorreleerd met de volksgezondheid (levensverwachting en sterfte)? &#8212; Jupyter Book Template</title>
   
   
   
@@ -61,7 +61,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Wat is tegenwoordig de gemiddelde sterfteleeftijd van een man wereldwijd?" href="notebook.html" />
+    <link rel="next" title="📊 Dataset and Preprocessing" href="Preprocessing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,12 +171,14 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    📘 Introductie
+                    Is economische groei (gemeten via GDP per capita) positief gecorreleerd met de volksgezondheid (levensverwachting en sterfte)?
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebook.html">Wat is tegenwoordig de gemiddelde sterfteleeftijd van een man wereldwijd?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Preprocessing.html">📊 Dataset and Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reflectie.html">Reflectie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workdistribution.html">Work Distribution</a></li>
 </ul>
 
     </div>
@@ -349,7 +351,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -360,11 +364,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>📘 Introductie</h1>
+    <h1>Is economische groei (gemeten via GDP per capita) positief gecorreleerd met de volksgezondheid (levensverwachting en sterfte)?</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introductie">📘 Introductie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-1-economische-groei-verbetert-de-volksgezondheid"><strong>Perspectief 1: Economische groei verbetert de volksgezondheid.</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-2-economische-groei-garandeert-geen-betere-volksgezondheid"><strong>Perspectief 2: Economische groei garandeert geen betere volksgezondheid.</strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -374,17 +390,23 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="introductie">
-<h1>📘 Introductie<a class="headerlink" href="#introductie" title="Link to this heading">#</a></h1>
-<p>De gemiddelde levensverwachting is wereldwijd toegenomen in de afgelopen decennia, mede dankzij vooruitgang in medische zorg, hygiëne, voeding en internationale samenwerking op het gebied van volksgezondheid. Toch maskeert dit globale gemiddelde de grote regionale verschillen die nog steeds bestaan. Waarom worden mannen in sommige delen van de wereld gemiddeld bijna 80 jaar oud, terwijl dat in andere regio’s nauwelijks boven de 60 uitkomt?</p>
-<p>In deze data story verkennen we hoe de levensverwachting van mannen zich wereldwijd ontwikkelt, en welke structurele verschillen er zijn tussen regio’s. We richten ons op twee perspectieven die deze globale gezondheidsstands benaderen vanuit verschillende invalshoeken:</p>
-<ul class="simple">
-<li><p><strong>Perspectief 1 – Wereldwijde vooruitgang in volksgezondheid:</strong><br />
-In veel regio’s is sprake van een duidelijke stijging in de levensverwachting bij geboorte. Deze trend suggereert dat landen wereldwijd erin slagen hun gezondheidssystemen te verbeteren en de levensomstandigheden te verhogen.</p></li>
-<li><p><strong>Perspectief 2 – Structurele ongelijkheid tussen regio’s:</strong><br />
-Tegelijkertijd blijven bepaalde regio’s, met name Sub-Sahara Afrika, achter. Hier liggen de sterftecijfers onder volwassen mannen nog altijd beduidend hoger dan het wereldgemiddelde. Dit roept vragen op over ongelijkheid in toegang tot zorg, sociaaleconomische factoren, en de rol van internationale hulp en beleid.</p></li>
-</ul>
-<p>Voor onze analyse maken we gebruik van data van de Wereldbank over levensverwachting en sterftecijfers van mannen per land, over de periode 1960 tot 2022. Door middel van interactieve en statische visualisaties vergelijken we de trends wereldwijd en leggen we bloot waar vooruitgang stokt. Zo willen we bijdragen aan een genuanceerd beeld van globale gezondheid en de complexe dynamiek van ongelijkheid daarin.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="is-economische-groei-gemeten-via-gdp-per-capita-positief-gecorreleerd-met-de-volksgezondheid-levensverwachting-en-sterfte">
+<h1>Is economische groei (gemeten via GDP per capita) positief gecorreleerd met de volksgezondheid (levensverwachting en sterfte)?<a class="headerlink" href="#is-economische-groei-gemeten-via-gdp-per-capita-positief-gecorreleerd-met-de-volksgezondheid-levensverwachting-en-sterfte" title="Link to this heading">#</a></h1>
+<p><em>Een datagedreven blik op globale gezondheidsverschillen tussen regio’s.</em></p>
+<section id="introductie">
+<h2>📘 Introductie<a class="headerlink" href="#introductie" title="Link to this heading">#</a></h2>
+<p>Hoe beïnvloedt economische groei de volksgezondheid? Deze vraag staat centraal in dit data-verhaal. In een wereld waarin economische vooruitgang vaak wordt gezien als de sleutel tot maatschappelijke ontwikkeling, is het belangrijk om te onderzoeken of een hogere welvaart ook daadwerkelijk leidt tot een gezondere bevolking. Met behulp van drie datasets — levensverwachting (<code class="docutils literal notranslate"><span class="pre">lifeexp.csv</span></code>), sterftecijfers (<code class="docutils literal notranslate"><span class="pre">mortality.csv</span></code>) en GDP per capita (<code class="docutils literal notranslate"><span class="pre">GDPpercapita.csv</span></code>) — analyseren we deze relatie aan de hand van verschillende visualisaties.</p>
+<p>We benaderen het onderwerp vanuit twee perspectieven:</p>
+<section id="perspectief-1-economische-groei-verbetert-de-volksgezondheid">
+<h3><strong>Perspectief 1: Economische groei verbetert de volksgezondheid.</strong><a class="headerlink" href="#perspectief-1-economische-groei-verbetert-de-volksgezondheid" title="Link to this heading">#</a></h3>
+<p>Volgens dit perspectief leidt een stijgend GDP per capita tot betere toegang tot gezondheidszorg, voeding, schoon water en onderwijs, wat zich uiteindelijk vertaalt in een hogere levensverwachting en lagere sterftecijfers. Dit standpunt wordt vaak gehanteerd door beleidsmakers en economen die economische groei beschouwen als motor voor vooruitgang.</p>
+</section>
+<section id="perspectief-2-economische-groei-garandeert-geen-betere-volksgezondheid">
+<h3><strong>Perspectief 2: Economische groei garandeert geen betere volksgezondheid.</strong><a class="headerlink" href="#perspectief-2-economische-groei-garandeert-geen-betere-volksgezondheid" title="Link to this heading">#</a></h3>
+<p>Vanuit dit perspectief is GDP slechts één van de vele factoren die de volksgezondheid beïnvloeden. Landen met een hoog GDP presteren niet altijd beter op gezondheidsindicatoren zoals levensverwachting of kindersterfte. Ook factoren zoals inkomensongelijkheid, leefstijl, milieuvervuiling en de kwaliteit van het zorgsysteem spelen een cruciale rol. In dit perspectief wordt benadrukt dat economische welvaart niet automatisch leidt tot een gezond leven voor alle burgers.</p>
+<p>Door deze twee perspectieven naast elkaar te zetten en te onderbouwen met visualisaties, willen we niet alleen trends laten zien, maar ook het debat inzichtelijk maken over de rol van economische groei in gezondheid. De inzichten uit dit verhaal kunnen relevant zijn voor beleidsmakers, ontwikkelingsorganisaties en wetenschappers die zoeken naar duurzame manieren om zowel economische als gezondheidsdoelen te bereiken.</p>
+</section>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -420,11 +442,11 @@ Tegelijkertijd blijven bepaalde regio’s, met name Sub-Sahara Afrika, achter. H
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="notebook.html"
+       href="Preprocessing.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Wat is tegenwoordig de gemiddelde sterfteleeftijd van een man wereldwijd?</p>
+        <p class="prev-next-title">📊 Dataset and Preprocessing</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -434,6 +456,25 @@ Tegelijkertijd blijven bepaalde regio’s, met name Sub-Sahara Afrika, achter. H
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introductie">📘 Introductie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-1-economische-groei-verbetert-de-volksgezondheid"><strong>Perspectief 1: Economische groei verbetert de volksgezondheid.</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-2-economische-groei-garandeert-geen-betere-volksgezondheid"><strong>Perspectief 2: Economische groei garandeert geen betere volksgezondheid.</strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

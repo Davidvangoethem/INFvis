@@ -1,13 +1,17 @@
+# Is economische groei (gemeten via GDP per capita) positief gecorreleerd met de volksgezondheid (levensverwachting en sterfte)?
+
+_Een datagedreven blik op globale gezondheidsverschillen tussen regio’s._
+
 ## 📘 Introductie
 
-De gemiddelde levensverwachting is wereldwijd toegenomen in de afgelopen decennia, mede dankzij vooruitgang in medische zorg, hygiëne, voeding en internationale samenwerking op het gebied van volksgezondheid. Toch maskeert dit globale gemiddelde de grote regionale verschillen die nog steeds bestaan. Waarom worden mannen in sommige delen van de wereld gemiddeld bijna 80 jaar oud, terwijl dat in andere regio’s nauwelijks boven de 60 uitkomt?
+Hoe beïnvloedt economische groei de volksgezondheid? Deze vraag staat centraal in dit data-verhaal. In een wereld waarin economische vooruitgang vaak wordt gezien als de sleutel tot maatschappelijke ontwikkeling, is het belangrijk om te onderzoeken of een hogere welvaart ook daadwerkelijk leidt tot een gezondere bevolking. Met behulp van drie datasets — levensverwachting (`lifeexp.csv`), sterftecijfers (`mortality.csv`) en GDP per capita (`GDPpercapita.csv`) — analyseren we deze relatie aan de hand van verschillende visualisaties.
 
-In deze data story verkennen we hoe de levensverwachting van mannen zich wereldwijd ontwikkelt, en welke structurele verschillen er zijn tussen regio’s. We richten ons op twee perspectieven die deze globale gezondheidsstands benaderen vanuit verschillende invalshoeken:
+We benaderen het onderwerp vanuit twee perspectieven:
 
-- **Perspectief 1 – Wereldwijde vooruitgang in volksgezondheid:**  
-  In veel regio’s is sprake van een duidelijke stijging in de levensverwachting bij geboorte. Deze trend suggereert dat landen wereldwijd erin slagen hun gezondheidssystemen te verbeteren en de levensomstandigheden te verhogen.
+### **Perspectief 1: Economische groei verbetert de volksgezondheid.**
+Volgens dit perspectief leidt een stijgend GDP per capita tot betere toegang tot gezondheidszorg, voeding, schoon water en onderwijs, wat zich uiteindelijk vertaalt in een hogere levensverwachting en lagere sterftecijfers. Dit standpunt wordt vaak gehanteerd door beleidsmakers en economen die economische groei beschouwen als motor voor vooruitgang.
 
-- **Perspectief 2 – Structurele ongelijkheid tussen regio’s:**  
-  Tegelijkertijd blijven bepaalde regio’s, met name Sub-Sahara Afrika, achter. Hier liggen de sterftecijfers onder volwassen mannen nog altijd beduidend hoger dan het wereldgemiddelde. Dit roept vragen op over ongelijkheid in toegang tot zorg, sociaaleconomische factoren, en de rol van internationale hulp en beleid.
+### **Perspectief 2: Economische groei garandeert geen betere volksgezondheid.**
+Vanuit dit perspectief is GDP slechts één van de vele factoren die de volksgezondheid beïnvloeden. Landen met een hoog GDP presteren niet altijd beter op gezondheidsindicatoren zoals levensverwachting of kindersterfte. Ook factoren zoals inkomensongelijkheid, leefstijl, milieuvervuiling en de kwaliteit van het zorgsysteem spelen een cruciale rol. In dit perspectief wordt benadrukt dat economische welvaart niet automatisch leidt tot een gezond leven voor alle burgers.
 
-Voor onze analyse maken we gebruik van data van de Wereldbank over levensverwachting en sterftecijfers van mannen per land, over de periode 1960 tot 2022. Door middel van interactieve en statische visualisaties vergelijken we de trends wereldwijd en leggen we bloot waar vooruitgang stokt. Zo willen we bijdragen aan een genuanceerd beeld van globale gezondheid en de complexe dynamiek van ongelijkheid daarin.
+Door deze twee perspectieven naast elkaar te zetten en te onderbouwen met visualisaties, willen we niet alleen trends laten zien, maar ook het debat inzichtelijk maken over de rol van economische groei in gezondheid. De inzichten uit dit verhaal kunnen relevant zijn voor beleidsmakers, ontwikkelingsorganisaties en wetenschappers die zoeken naar duurzame manieren om zowel economische als gezondheidsdoelen te bereiken.

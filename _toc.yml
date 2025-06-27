@@ -4,4 +4,8 @@
 format: jb-book
 root: docs/home
 chapters:
-- file: docs/notebook
+- file: docs/Preprocessing
+- file: docs/reflectie
+- file: docs/workdistribution
+
+
