@@ -30,6 +30,7 @@ html:
 
 # Add launch buttons
 launch_buttons:
+  thebe                  : true
   binderhub_url: ""
   colab_url: "https://colab.research.google.com"
   jupyterhub_url: ""
