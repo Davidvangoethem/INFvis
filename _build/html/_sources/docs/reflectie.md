@@ -1,4 +1,4 @@
-## Reflectie
+# Reflectie
 
 Tijdens dit project hebben we niet alleen onze technische vaardigheden aangescherpt, maar ook geleerd om kritisch en visueel te communiceren over maatschappelijke thema’s. De balans tussen data-inzichten en een helder narratief vormde een belangrijke uitdaging. Het kostte tijd om een structuur te vinden waarin de visualisaties logisch aansloten op de perspectieven.
 
