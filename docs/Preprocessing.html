@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>📊 Dataset and Preprocessing &#8212; Jupyter Book Template</title>
+    <title>Dataset and Preprocessing &#8212; Economische groei en volksgezondheid</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -62,7 +62,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Reflectie" href="reflectie.html" />
-    <link rel="prev" title="Is economische groei (gemeten via GDP per capita) positief gecorreleerd met de volksgezondheid (levensverwachting en sterfte)?" href="home.html" />
+    <link rel="prev" title="Introductie" href="home.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -149,8 +149,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/picca.jpg" class="logo__image only-light" alt="Economische groei en volksgezondheid - Home"/>
+    <script>document.write(`<img src="../_static/picca.jpg" class="logo__image only-dark" alt="Economische groei en volksgezondheid - Home"/>`);</script>
   
-    <p class="title logo__title">Jupyter Book Template</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -170,12 +176,12 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="home.html">
-                    Is economische groei (gemeten via GDP per capita) positief gecorreleerd met de volksgezondheid (levensverwachting en sterfte)?
+                    Introductie
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">📊 Dataset and Preprocessing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dataset and Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reflectie.html">Reflectie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workdistribution.html">Work Distribution</a></li>
 </ul>
@@ -363,7 +369,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>📊 Dataset and Preprocessing</h1>
+    <h1>Dataset and Preprocessing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -373,8 +379,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabelenoverzicht">🧾 Variabelenoverzicht</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hoe-we-met-de-data-zijn-omgegaan">⚙️ Hoe we met de data zijn omgegaan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabelenoverzicht">Variabelenoverzicht</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
 </ul>
             </nav>
         </div>
@@ -386,33 +392,23 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="dataset-and-preprocessing">
-<h1>📊 Dataset and Preprocessing<a class="headerlink" href="#dataset-and-preprocessing" title="Link to this heading">#</a></h1>
-<p>We gebruiken drie datasets van de Wereldbank:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="dataset-and-preprocessing">
+<h1>Dataset and Preprocessing<a class="headerlink" href="#dataset-and-preprocessing" title="Link to this heading">#</a></h1>
+<p>Voor dit project hebben we drie datasets van de Wereldbank gebruikt:</p>
 <ol class="arabic simple">
-<li><p><strong>Adult Mortality Rate (mannen)</strong></p>
-<ul class="simple">
-<li><p>Jaarlijkse sterftecijfers per 1.000 volwassen mannen</p></li>
-<li><p><a class="reference external" href="https://data360.worldbank.org/en/indicator/WB_HNP_SP_DYN_AMRT?recentYear=false&amp;amp;sex=M">Link naar dataset</a></p></li>
-</ul>
-</li>
-<li><p><strong>Life Expectancy at Birth (male)</strong></p>
-<ul class="simple">
-<li><p>Levensverwachting van mannen bij geboorte per land en jaar</p></li>
-<li><p><a class="reference external" href="https://data360.worldbank.org/en/indicator/WB_WDI_SP_DYN_LE00_MA_IN">Link naar dataset</a></p></li>
-</ul>
-</li>
-<li><p><strong>GDP per country (Current US$)</strong></p>
-<ul class="simple">
-<li><p>Jaarlijkse GDP per land</p></li>
-<li><p><a class="reference external" href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?end=2023&amp;amp;start=2023&amp;amp;utm_source=chatgpt.com&amp;amp;view=map&amp;amp;year=1960">Link naar dataset</a></p></li>
-</ul>
-</li>
+<li><p><strong>Adult Mortality Rate (mannen)</strong><br />
+Jaarlijkse sterfte per 1.000 volwassen mannen<br />
+<a class="reference external" href="https://data360.worldbank.org/en/indicator/WB_HNP_SP_DYN_AMRT?recentYear=false&amp;amp;sex=M">Bekijk dataset</a></p></li>
+<li><p><strong>Life Expectancy at Birth (male)</strong><br />
+Levensverwachting van mannen bij geboorte<br />
+<a class="reference external" href="https://data360.worldbank.org/en/indicator/WB_WDI_SP_DYN_LE00_MA_IN">Bekijk dataset</a></p></li>
+<li><p><strong>GDP per capita (Current US$)</strong><br />
+Bruto binnenlands product per hoofd per land per jaar<br />
+<a class="reference external" href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?end=2023&amp;amp;start=2023&amp;amp;utm_source=chatgpt.com&amp;amp;view=map&amp;amp;year=1960">Bekijk dataset</a></p></li>
 </ol>
-<p>Alle datasets zijn in <code class="docutils literal notranslate"><span class="pre">.csv</span></code> formaat en bevatten waarden van 1960 tot 2022 voor vrijwel alle landen.</p>
-<hr class="docutils" />
+<p>Alle datasets beslaan de periode 1960–2022 en zijn in <code class="docutils literal notranslate"><span class="pre">.csv</span></code>-formaat.</p>
 <section id="variabelenoverzicht">
-<h2>🧾 Variabelenoverzicht<a class="headerlink" href="#variabelenoverzicht" title="Link to this heading">#</a></h2>
+<h2>Variabelenoverzicht<a class="headerlink" href="#variabelenoverzicht" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Variabele</p></th>
@@ -431,7 +427,7 @@ document.write(`
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Life</span> <span class="pre">Expectancy</span></code></p></td>
 <td><p>Ratio</p></td>
-<td><p>Levensverwachting bij geboorte (mannen)</p></td>
+<td><p>Levensverwachting bij geboorte</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Adult</span> <span class="pre">Mortality</span></code></p></td>
 <td><p>Ratio</p></td>
@@ -439,22 +435,18 @@ document.write(`
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">GDP</span> <span class="pre">per</span> <span class="pre">capita</span> <span class="pre">(log)</span></code></p></td>
 <td><p>Ratio</p></td>
-<td><p>Logaritme van het BBP per hoofd</p></td>
+<td><p>Log van het BBP per hoofd</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Deze variabelen vormen de ruggengraat van onze analyses. Ze bieden een rijk perspectief op gezondheid, ongelijkheid en economische ontwikkeling door de tijd heen.</p>
 </section>
-<hr class="docutils" />
-<section id="hoe-we-met-de-data-zijn-omgegaan">
-<h2>⚙️ Hoe we met de data zijn omgegaan<a class="headerlink" href="#hoe-we-met-de-data-zijn-omgegaan" title="Link to this heading">#</a></h2>
-<p>Om beter te begrijpen hoe levensverwachting en sterftecijfers zich wereldwijd ontwikkelen, zijn we begonnen met het verzamelen van relevante gegevens van de Wereldbank. We maakten gebruik van drie datasets die samen een breed beeld geven van gezondheid en sociaaleconomische ontwikkeling bij mannen.</p>
-<p>De ruwe datasets zijn omvangrijk en soms wat onoverzichtelijk – met jaren als kolommen en landen als rijen. Daarom hebben we ze eerst omgevormd naar een lang formaat, waarbij elke regel staat voor een specifieke combinatie van land en jaar. Zo konden we trends in de tijd veel beter volgen.</p>
-<p>Vervolgens hebben we de datasets samengevoegd. Door ‘land’ en ‘jaar’ als gemeenschappelijke sleutels te gebruiken, ontstond één geïntegreerd databestand waarin we per land en jaar de levensverwachting, sterftecijfers en economische situatie naast elkaar kunnen analyseren.</p>
-<p>Zoals vaak bij wereldwijde data, bleek niet elk land in elk jaar volledige informatie te hebben. Om te zorgen dat onze analyse representatief blijft, hebben we kritisch gekeken naar ontbrekende waarden. In sommige gevallen hebben we die weggelaten; in andere gevallen gebruikten we eenvoudige methodes, zoals interpolatie, om gaten op te vullen zonder de trends te vertekenen.</p>
-<p>Tot slot hebben we de economische data (GDP) bewerkt met een log-transformatie. Dit maakt het makkelijker om landen eerlijk te vergelijken, aangezien de verschillen in bruto binnenlands product soms extreem groot zijn.</p>
-<p>Met deze verwerkte dataset konden we aan de slag: visualisaties maken, trends blootleggen en zoeken naar verbanden. Want alleen met schone en goed gestructureerde data kunnen we een eerlijk verhaal vertellen over gezondheid, ongelijkheid en vooruitgang in de wereld.</p>
+<section id="preprocessing">
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h2>
+<p>De ruwe datasets zijn getransformeerd naar long format, waarbij elke rij één land-jaar combinatie beschrijft. Zo konden we trends in de tijd eenvoudiger visualiseren.</p>
+<p>Na conversie hebben we de datasets samengevoegd op <code class="docutils literal notranslate"><span class="pre">land</span></code> en <code class="docutils literal notranslate"><span class="pre">jaar</span></code>, zodat per observatie de drie indicatoren beschikbaar waren. Ontbrekende waarden zijn kritisch beoordeeld: in sommige gevallen verwijderd, in andere gevallen ingevuld via eenvoudige interpolatie.</p>
+<p>Omdat GDP-waarden sterk uiteenlopen tussen landen, hebben we een log-transformatie toegepast. Dit maakte vergelijkingen eerlijker en visuele patronen duidelijker.</p>
+<p>Deze opgeschoonde dataset vormt de basis voor onze visualisaties en analyses.</p>
 </section>
 </section>
 
@@ -494,7 +486,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Is economische groei (gemeten via GDP per capita) positief gecorreleerd met de volksgezondheid (levensverwachting en sterfte)?</p>
+        <p class="prev-next-title">Introductie</p>
       </div>
     </a>
     <a class="right-next"
@@ -522,8 +514,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabelenoverzicht">🧾 Variabelenoverzicht</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hoe-we-met-de-data-zijn-omgegaan">⚙️ Hoe we met de data zijn omgegaan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabelenoverzicht">Variabelenoverzicht</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
 </ul>
   </nav></div>
 
@@ -538,7 +530,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By Yen-Chia Hsu
+By Max, Daan, Mingus & David
 </p>
 
   </div>
